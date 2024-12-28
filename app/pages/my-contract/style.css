@@ -1,0 +1,40 @@
+.role-checkbox{
+    width: fit-content;
+    /* margin: 0 !important; */
+    margin: 10px;
+    height: 10px;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.role-checkbox input {
+  scale: 1.2;
+  margin: 0;
+}
+
+.role-checkbox .user-name:not(:empty) {
+  border: 1px solid springgreen;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  padding: 3px 5px;
+}
+
+#committee-positions{
+  position: relative;
+}
+
+#committee-positions button {
+  /* float: right; */
+  /* position: absolute; */
+  margin-left: auto;
+  right:0;
+  padding: 4px;
+}
+
+.studioSignsQuestion{
+  display:block;
+  border: 1px solid black;
+  padding: 10px;
+}

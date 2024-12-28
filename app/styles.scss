@@ -1,0 +1,120 @@
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    input-component {
+        // margin-right: 10px;
+    }
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    button {
+        width: fit-content
+    }
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    margin: 40px 0;
+}
+
+input,
+label,
+textarea {
+    box-sizing: border-box;
+    // width: 100% !important;
+    // background-color: black !important
+}
+
+textarea-component,
+input-component {
+}
+.w-100 {
+    width: 100% !important;
+    width: -webkit-fill-available !important;
+}
+
+.container{
+   max-width: 1000px;
+    margin: 0 auto;
+}
+
+#questionnaire{
+    display: flex;
+    flex-direction: column;
+    label {
+        width: fit-content;
+        display: flex;
+        align-items: baseline;
+        box-sizing: border-box;
+        input {
+            box-sizing: border-box;
+        margin-right: 10px;
+         translate: 0 3px; 
+        }
+        textarea-component {
+            margin-top: 30px;
+        }
+        textarea {
+            width: 100%;
+           
+        }
+        // margin-left: 24px;
+    }
+    .level-1{
+        margin-left: 40px;
+    }
+    .level-2 {
+        margin-left: 75px;
+    }
+    .level-3{
+        margin-left: 100px;
+    }
+}
+
+#studioElement{
+    // width:fit-content;
+    width: 100%;;
+}
+
+
+button {
+    background-color: #272727;
+    color: white;
+    border: none;
+    padding: 13px 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &.small{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+a {
+    color: blue;
+    text-decoration: underline;
+
+    &:hover {
+        color: darkblue;
+    }
+}

@@ -1,0 +1,108 @@
+
+<link
+rel="stylesheet"
+href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+crossorigin="anonymous"
+/>
+
+<!-- I don't remember what data-primary meant -->
+<div class="os-dual-form" data-primary="login" auth-mode="login">
+  <form id="signup" class="left" autocomplete="off">
+    <h1>Sign up</h1>
+    <os-form-feedback feedbackName="success"></os-form-feedback>
+
+    <div class="row">
+      <input-component
+        required="true"
+        fieldName="firstName"
+        alias="First Name"
+      ></input-component>
+
+      <input-component
+        required="true"
+        fieldName="lastName"
+        alias="Last Name"
+      ></input-component>
+    </div>
+    <div class="" style="margin-right: auto; margin-left: 10px">
+      <!-- <input-component
+        required="true"
+        fieldName="username"
+        alias="Username"
+      ></input-component> -->
+      <input-component required="true" fieldName="email" alias="Email">
+      </input-component>
+    </div>
+    <div class="row">
+      <input-component
+        required="true"
+        fieldName="password"
+        type="password"
+        alias="Password"
+      ></input-component>
+      <input-component
+        required="true"
+        fieldName="confirm-password"
+        type="password"
+        alias="Confirm Password"
+      ></input-component>
+    </div>
+    <!-- <div id="reCAPTCHA"></div>
+      <os-form-feedback feedbackName="reCAPTCHA"></os-form-feedback> -->
+
+    <div class="column submitBtnsContainer">
+      <button type="submit">Submit</button>
+
+      <button type="button" class="mobile-view toggleAuthType">
+        Go to Log in
+      </button>
+    </div>
+    <os-form-feedback feedbackName="submit"></os-form-feedback>
+  </form>
+  <form id="login" class="right"  autocomplete="off">
+    <h1>Login</h1>
+    <input-component
+      required="true"
+      fieldName="email-login"
+      alias="Email"
+      type="email"
+    ></input-component>
+    <input-component
+      required="true"
+      fieldName="password-login"
+      type="password"
+      alias="Password"
+    ></input-component>
+    <div class="column submitBtnsContainer">
+      <button type="submit">Submit</button>
+      <style>
+        .reset-password {
+          color: #007bff;
+          text-decoration: none;
+          cursor: pointer;
+          margin-top: 10px;
+          /* position: absolute; */
+          /* bottom: 0; */
+        }
+        .reset-password:hover {
+          text-decoration: underline;
+        }
+      </style>
+      <a type="button" class="reset-password">Reset Password</a>
+      <button type="button" class="mobile-view toggleAuthType">
+        Register new account
+      </button>
+    </div>
+    <os-form-feedback feedbackName="submit"></os-form-feedback>
+  </form>
+
+  <div class="cover left login" style="background-image: url(${loginImage})">
+    <button type="button" class="toggleAuthType secondary">
+      Register new account
+    </button>
+  </div>
+  <div class="cover right signup" style="background-image: url(${signupImage})">
+    <button type="button" class="toggleAuthType">Go to Log in</button>
+  </div>
+</div>

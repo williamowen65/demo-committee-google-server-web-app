@@ -1,0 +1,50 @@
+{
+  "name": "demo-glitch-deployment",
+  "version": "1.0.0",
+  "description": "This is a demo version of a website deployed to a Glitch server",
+  "main": "server.js",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "concurrently": "^9.1.0",
+    "css-loader": "^7.1.2",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:w": "nodemon server.js",
+    "build:w": "webpack --config webpack.components.config.js --watch",
+    "webpack": "webpack",
+    "build:scss": "sass app/styles.scss dist/styles.css",
+    "watch:scss": "sass --watch app/styles.scss dist/styles.css",
+    "deploy:gcf:googleapis": "cd app\\cloudFunctions\\google && gcloud functions deploy googleapis --runtime nodejs20 --trigger-http --allow-unauthenticated --service-account 13428009497-compute@developer.gserviceaccount.com && cd ..\\..\\..",
+    "logs:gcf:googleapis": "gcloud functions logs read googleapis",
+    "dev": "concurrently -k -n \"SERVER,WEBPACK,SCSS\" -c \"bgBlue.bold,bgGreen.bold,bgMagenta.bold\" \"npm run start:w\" \"npm run build:w\" \"npm run watch:scss\""
+
+  },
+  "author": "William Owen <william.owen.dev@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.1",
+    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@google-cloud/functions-framework": "^3.4.2",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "googleapis": "^144.0.0",
+    "marked": "^15.0.3",
+    "node-fetch": "^2.7.0"
+  },
+  "keywords": [
+    "node",
+    "glitch"
+  ]
+}

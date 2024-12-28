@@ -1,0 +1,108 @@
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.column button {
+  width: fit-content;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin: 40px 0;
+}
+
+input,
+label,
+textarea {
+  box-sizing: border-box;
+}
+
+.w-100 {
+  width: 100% !important;
+  width: -webkit-fill-available !important;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#questionnaire {
+  display: flex;
+  flex-direction: column;
+}
+#questionnaire label {
+  width: fit-content;
+  display: flex;
+  align-items: baseline;
+  box-sizing: border-box;
+}
+#questionnaire label input {
+  box-sizing: border-box;
+  margin-right: 10px;
+  translate: 0 3px;
+}
+#questionnaire label textarea-component {
+  margin-top: 30px;
+}
+#questionnaire label textarea {
+  width: 100%;
+}
+#questionnaire .level-1 {
+  margin-left: 40px;
+}
+#questionnaire .level-2 {
+  margin-left: 75px;
+}
+#questionnaire .level-3 {
+  margin-left: 100px;
+}
+
+#studioElement {
+  width: 100%;
+}
+
+button {
+  background-color: #272727;
+  color: white;
+  border: none;
+  padding: 13px 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button.small {
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:hover {
+  color: darkblue;
+}
+
+/*# sourceMappingURL=styles.css.map */

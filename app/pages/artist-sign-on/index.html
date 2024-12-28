@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/dist/components.js"></script>
+    <script type="module" src="/dist/firebase.js"></script>
+    <script>
+      window.sendMessageToParent = function(dataObject) {
+           window.parent.postMessage(dataObject, '*');
+      }
+
+
+      // There is a "flash" when going to a new page
+      // I think anchor links should be replaced with this logic
+
+   
+    </script>
+   
+  </head>
+  <body>
+    <header-component> </header-component>
+    <!-- Define 
+     the images to pass here
+     The redirect on success
+     -->
+    <dual-login-form-component
+      redirect="/members"
+      loginImage="/dist/assets/login.jpeg"
+      signupImage="/dist/assets/signup.jpg"
+    ></dual-login-form-component>
+
+    <footer-component></footer-component>
+  </body>
+</html>
